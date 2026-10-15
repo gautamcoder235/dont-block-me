@@ -448,48 +448,7 @@ export const INITIAL_SHWETA_QUIZ: Quiz = {
       correctIndex: 1, // One long message 📝
     },
   ],
-  scoreboard: [
-    {
-      id: 'sb-1',
-      name: 'Bittu kumar',
-      score: 10,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar1.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank1.svg',
-      doodle: '/static/assets/img/doodles/doodle-1.svg',
-      date: 'Just now',
-    },
-    {
-      id: 'sb-2',
-      name: 'Bittu kumar',
-      score: 9,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar2.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank2.svg',
-      doodle: '/static/assets/img/doodles/doodle-2.svg',
-      date: '1 hour ago',
-    },
-    {
-      id: 'sb-3',
-      name: 'Gautam',
-      score: 6,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar3.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank3.svg',
-      doodle: '/static/assets/img/doodles/doodle-3.svg',
-      date: '3 hours ago',
-    },
-    {
-      id: 'sb-4',
-      name: 'Bittu kumar',
-      score: 6,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar4.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rankall.svg',
-      doodle: '/static/assets/img/doodles/doodle-4.svg',
-      date: 'Yesterday',
-    },
-  ],
+  scoreboard: [],
 };
 
 const AVATAR_OPTIONS = [
@@ -506,7 +465,13 @@ const DOODLE_OPTIONS = [
   '/static/assets/img/doodles/doodle-4.svg',
 ];
 
-const STORAGE_KEY_QUIZZES = 'dontblockme_quizzes_clean';
+const STORAGE_KEY_QUIZZES = 'dontblockme_quizzes_fresh_v1';
+
+// Automatically clean any legacy or test scoreboard records
+try {
+  localStorage.removeItem('dontblockme_quizzes');
+  localStorage.removeItem('dontblockme_quizzes_clean');
+} catch {}
 
 export function getQuizById(id: string): Quiz {
   const targetId = id || 'gautam';
