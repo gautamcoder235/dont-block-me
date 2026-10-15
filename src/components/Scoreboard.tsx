@@ -66,9 +66,13 @@ export const Scoreboard: React.FC<ScoreboardProps> = ({
       {/* Scoreboard Cards List */}
       {filteredScoreboard.length === 0 ? (
         <div className="bg-white rounded-3xl p-8 border-2 border-dashed border-blue-200 text-center shadow-card">
-          <p className="text-base font-extrabold text-gray-700 mb-1">No friends found</p>
-          <p className="text-xs text-gray-400">
-            {searchQuery ? 'Try searching for another name!' : 'Be the first to play and set the high score!'}
+          <p className="text-base font-extrabold text-gray-800 mb-1 font-shantell">
+            {searchQuery ? 'No friends found' : 'No scores yet! 🏆'}
+          </p>
+          <p className="text-xs text-gray-400 font-medium">
+            {searchQuery
+              ? 'Try searching for another name!'
+              : 'Be the first to play and take the #1 spot on the leaderboard! ✨'}
           </p>
         </div>
       ) : (

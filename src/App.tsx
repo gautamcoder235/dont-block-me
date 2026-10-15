@@ -8,12 +8,13 @@ import { CompletedScreen } from './components/CompletedScreen';
 import { CreateQuizScreen } from './components/CreateQuizScreen';
 import { ContactModal } from './components/ContactModal';
 import { SoundToggle } from './components/SoundToggle';
+import { ShwetaSpecialExperience } from './components/ShwetaSpecialExperience';
 import { getQuizById, addScoreToQuiz, INITIAL_GAUTAM_QUIZ } from './data/quizData';
 import type { Quiz } from './data/quizData';
 
 export function App() {
   const [currentQuiz, setCurrentQuiz] = useState<Quiz>(INITIAL_GAUTAM_QUIZ);
-  const [currentView, setCurrentView] = useState<'landing' | 'nameInput' | 'playing' | 'completed' | 'create'>('landing');
+  const [currentView, setCurrentView] = useState<'landing' | 'nameInput' | 'playing' | 'completed' | 'create' | 'shwetaSpecial'>('landing');
   const [playerName, setPlayerName] = useState('');
   const [latestScore, setLatestScore] = useState(0);
   const [latestAnswers, setLatestAnswers] = useState<number[]>([]);
@@ -34,7 +35,11 @@ export function App() {
 
   const handleSubmitName = (name: string) => {
     setPlayerName(name);
-    setCurrentView('playing');
+    if (name.toLowerCase().includes('shweta')) {
+      setCurrentView('shwetaSpecial');
+    } else {
+      setCurrentView('playing');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -135,6 +140,19 @@ export function App() {
           questions={currentQuiz.questions}
           onBackToScoreboard={handleBackToScoreboard}
           onCreateQuiz={() => setCurrentView('create')}
+        />
+      )}
+
+      {currentView === 'shwetaSpecial' && (
+        <ShwetaSpecialExperience
+          onProceedToQuiz={() => {
+            setCurrentView('playing');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          onExitToNormal={() => {
+            setCurrentView('playing');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         />
       )}
 

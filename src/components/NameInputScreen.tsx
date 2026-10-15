@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ArrowRight, Sparkles } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
+import { CustomLogo } from './CustomLogo';
 
 interface NameInputScreenProps {
   onBack: () => void;
@@ -40,11 +41,7 @@ export const NameInputScreen: React.FC<NameInputScreenProps> = ({
           <ChevronLeft className="w-6 h-6" />
         </button>
 
-        <img
-          src="/static/assets/img/logo-f.webp"
-          alt="Don't Block Me"
-          className="w-36 h-auto drop-shadow-sm"
-        />
+        <CustomLogo size="sm" />
       </div>
 
       {/* Floating Doodles Background Decor */}

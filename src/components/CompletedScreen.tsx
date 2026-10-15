@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { Trophy, RefreshCw, Eye, ArrowLeft, Heart, ShieldAlert, ShieldCheck, Sparkles, PlusCircle } from 'lucide-react';
 import type { Question } from '../data/quizData';
 import { sounds } from '../utils/soundEffects';
+import { CustomLogo } from './CustomLogo';
 
 interface CompletedScreenProps {
   userName: string;
@@ -250,11 +251,7 @@ export const CompletedScreen: React.FC<CompletedScreenProps> = ({
           <span>Scoreboard</span>
         </button>
 
-        <img
-          src="/static/assets/img/logo-f.webp"
-          alt="Don't Block Me"
-          className="w-32 h-auto drop-shadow-sm"
-        />
+        <CustomLogo size="sm" />
       </div>
 
       {/* Funny Comic Dialogue Box */}

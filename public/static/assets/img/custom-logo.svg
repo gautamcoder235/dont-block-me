@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 110" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Sticker Drop Shadow -->
+    <filter id="sticker-shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#0284c7" flood-opacity="0.18" />
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1" flood-color="#0f172a" flood-opacity="0.1" />
+    </filter>
+
+    <!-- Linear Gradients for Letters -->
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF7597" />
+      <stop offset="100%" stop-color="#FF2E63" />
+    </linearGradient>
+
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+
+    <linearGradient id="bearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A76D49" />
+      <stop offset="100%" stop-color="#804A27" />
+    </linearGradient>
+  </defs>
+
+  <!-- Big Sticker Background with White Outline -->
+  <g filter="url(#sticker-shadow)">
+    <!-- White outer puffy silhouette for Kawaii sticker effect -->
+    <path d="M 45 35 
+             C 30 18, 12 25, 12 45 
+             C 4 58, 8 82, 22 92
+             C 32 98, 48 95, 62 90
+             C 90 98, 160 102, 230 96
+             C 275 102, 325 94, 332 72
+             C 338 52, 318 30, 290 26
+             C 260 22, 220 28, 180 24
+             C 140 18, 90 20, 68 30
+             Z" 
+          fill="#FFFFFF" 
+          stroke="#E2E8F0" 
+          stroke-width="5" 
+          stroke-linejoin="round" />
+  </g>
+
+  <!-- Mascot: Cute Dudu Bear Peeking from the Left -->
+  <g transform="translate(18, 18)">
+    <!-- Left Ear -->
+    <circle cx="16" cy="18" r="13" fill="url(#bearGrad)" stroke="#4A2810" stroke-width="2.5" />
+    <circle cx="16" cy="18" r="7" fill="#FBCFE8" />
+
+    <!-- Right Ear -->
+    <circle cx="56" cy="18" r="13" fill="url(#bearGrad)" stroke="#4A2810" stroke-width="2.5" />
+    <circle cx="56" cy="18" r="7" fill="#FBCFE8" />
+
+    <!-- Head -->
+    <circle cx="36" cy="38" r="26" fill="url(#bearGrad)" stroke="#4A2810" stroke-width="3" />
+
+    <!-- Snout Muzzle -->
+    <ellipse cx="36" cy="43" rx="14" ry="11" fill="#FDF4DC" />
+    <!-- Nose -->
+    <polygon points="36,38 32,35 40,35" fill="#4A2810" rx="1" />
+    <!-- Smile -->
+    <path d="M 33 42 Q 36 46 39 42" fill="none" stroke="#4A2810" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Eyes with cute anime sparkles -->
+    <circle cx="27" cy="34" r="3.5" fill="#261509" />
+    <circle cx="28" cy="33" r="1.2" fill="#FFFFFF" />
+
+    <!-- Right eye blinking (wink!) -->
+    <path d="M 42 34 Q 46 31 49 35" fill="none" stroke="#261509" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="21" cy="41" rx="4.5" ry="2.5" fill="#F472B6" opacity="0.85" />
+    <ellipse cx="51" cy="41" rx="4.5" ry="2.5" fill="#F472B6" opacity="0.85" />
+
+    <!-- Mint Green Bowtie -->
+    <path d="M 32 60 L 22 55 L 22 65 Z" fill="#34D399" stroke="#059669" stroke-width="1.5" />
+    <path d="M 40 60 L 50 55 L 50 65 Z" fill="#34D399" stroke="#059669" stroke-width="1.5" />
+    <circle cx="36" cy="60" r="3" fill="#10B981" />
+  </g>
+
+  <!-- Typography: "Don't" (Handwritten cursive bouncy candy-pink) -->
+  <g transform="translate(92, 16)">
+    <!-- Drop Shadow path for "Don't" -->
+    <text x="0" y="32" 
+          font-family="'Shantell Sans', 'Comic Sans MS', cursive" 
+          font-size="30" 
+          font-weight="900" 
+          fill="#9D174D" 
+          letter-spacing="0.5px">
+      don't
+    </text>
+    <!-- Main text -->
+    <text x="0" y="30" 
+          font-family="'Shantell Sans', 'Comic Sans MS', cursive" 
+          font-size="30" 
+          font-weight="900" 
+          fill="url(#pinkGrad)" 
+          stroke="#FFFFFF" 
+          stroke-width="2.5"
+          paint-order="stroke fill"
+          letter-spacing="0.5px">
+      don't
+    </text>
+  </g>
+
+  <!-- Typography: "BLOCK" (Bold, 3D Bubbly Sky-Blue) -->
+  <g transform="translate(90, 52)">
+    <!-- 3D Shadow -->
+    <text x="0" y="36" 
+          font-family="'Shantell Sans', 'Impact', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          fill="#0369A1" 
+          letter-spacing="1.5px">
+      BLOCK
+    </text>
+    <!-- Main Fill -->
+    <text x="0" y="33" 
+          font-family="'Shantell Sans', 'Impact', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          fill="url(#blueGrad)" 
+          stroke="#FFFFFF" 
+          stroke-width="3"
+          paint-order="stroke fill"
+          letter-spacing="1.5px">
+      BLOCK
+    </text>
+    <!-- Highlight shine line on letters -->
+    <text x="0" y="33" 
+          font-family="'Shantell Sans', 'Impact', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          fill="none" 
+          stroke="#BAE6FD" 
+          stroke-width="1"
+          stroke-dasharray="8 12"
+          letter-spacing="1.5px">
+      BLOCK
+    </text>
+  </g>
+
+  <!-- Typography: "ME" (Pink Cute Bubble with Heart) -->
+  <g transform="translate(244, 52)">
+    <!-- 3D Shadow -->
+    <text x="0" y="36" 
+          font-family="'Shantell Sans', 'Impact', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          fill="#9D174D" 
+          letter-spacing="1.5px">
+      ME
+    </text>
+    <!-- Main Fill -->
+    <text x="0" y="33" 
+          font-family="'Shantell Sans', 'Impact', sans-serif" 
+          font-size="44" 
+          font-weight="900" 
+          fill="url(#pinkGrad)" 
+          stroke="#FFFFFF" 
+          stroke-width="3"
+          paint-order="stroke fill"
+          letter-spacing="1.5px">
+      ME
+    </text>
+  </g>
+
+  <!-- Little Decorative Sparkles & Doodles -->
+  <!-- Yellow Sparkle Star Top Right -->
+  <path d="M 314 26 Q 314 34 322 34 Q 314 34 314 42 Q 314 34 306 34 Q 314 34 314 26 Z" 
+        fill="url(#yellowGrad)" stroke="#B45309" stroke-width="1" />
+
+  <!-- Tiny Pink Heart Floating -->
+  <path d="M 188 20 C 188 16, 183 14, 180 17 C 177 14, 172 16, 172 20 C 172 24, 180 29, 180 29 C 180 29, 188 24, 188 20 Z" 
+        fill="#FF4C8A" stroke="#FFFFFF" stroke-width="1.5" />
+
+  <!-- Mini Yellow Star next to "don't" -->
+  <circle cx="82" cy="22" r="3" fill="#FBBF24" />
+  <circle cx="318" cy="62" r="2.5" fill="#38BDF8" />
+</svg>

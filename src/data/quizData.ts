@@ -217,48 +217,7 @@ export const INITIAL_GAUTAM_QUIZ: Quiz = {
       correctIndex: 0,
     },
   ],
-  scoreboard: [
-    {
-      id: 'sb-g1',
-      name: 'Shweta',
-      score: 10,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar1.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank1.svg',
-      doodle: '/static/assets/img/doodles/doodle-1.svg',
-      date: 'Just now',
-    },
-    {
-      id: 'sb-g2',
-      name: 'Ananya',
-      score: 9,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar2.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank2.svg',
-      doodle: '/static/assets/img/doodles/doodle-2.svg',
-      date: '2 hours ago',
-    },
-    {
-      id: 'sb-g3',
-      name: 'Priya',
-      score: 8,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar3.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rank3.svg',
-      doodle: '/static/assets/img/doodles/doodle-3.svg',
-      date: 'Yesterday',
-    },
-    {
-      id: 'sb-g4',
-      name: 'Sneha',
-      score: 6,
-      total: 10,
-      avatar: '/static/assets/img/user/scoreboard/avatars/avatar4.webp',
-      rankBadge: '/static/assets/img/user/scoreboard/ranks/rankall.svg',
-      doodle: '/static/assets/img/doodles/doodle-4.svg',
-      date: '2 days ago',
-    },
-  ],
+  scoreboard: [],
 };
 
 export const INITIAL_SHWETA_QUIZ: Quiz = {
@@ -547,20 +506,18 @@ const DOODLE_OPTIONS = [
   '/static/assets/img/doodles/doodle-4.svg',
 ];
 
-const STORAGE_KEY_QUIZZES = 'dontblockme_quizzes';
+const STORAGE_KEY_QUIZZES = 'dontblockme_quizzes_clean';
 
 export function getQuizById(id: string): Quiz {
-  if (id === 'fgpPacQ') {
+  const targetId = id || 'gautam';
+  if (targetId === 'fgpPacQ') {
     return INITIAL_SHWETA_QUIZ;
-  }
-  if (id === 'gautam' || !id) {
-    return INITIAL_GAUTAM_QUIZ;
   }
   try {
     const raw = localStorage.getItem(STORAGE_KEY_QUIZZES);
     if (raw) {
       const quizzes: Record<string, Quiz> = JSON.parse(raw);
-      if (quizzes[id]) return quizzes[id];
+      if (quizzes[targetId]) return quizzes[targetId];
     }
   } catch (e) {
     console.error(e);

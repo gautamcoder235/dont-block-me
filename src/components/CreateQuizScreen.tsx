@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { ArrowLeft, ArrowRight, Copy, Check, Share2, Play, Sparkles } from 'lucide-react';
 import { INITIAL_SHWETA_QUIZ, INITIAL_GAUTAM_QUIZ, saveQuiz } from '../data/quizData';
 import type { Quiz } from '../data/quizData';
+import { CustomLogo } from './CustomLogo';
 
 interface CreateQuizScreenProps {
   onBack: () => void;
@@ -112,11 +113,7 @@ export const CreateQuizScreen: React.FC<CreateQuizScreenProps> = ({
           <ArrowLeft className="w-5 h-5" />
         </button>
 
-        <img
-          src="/static/assets/img/logo-f.webp"
-          alt="Don't Block Me"
-          className="w-32 h-auto drop-shadow-sm"
-        />
+        <CustomLogo size="sm" />
       </div>
 
       {/* STEP 1: Enter Name and Gender */}
