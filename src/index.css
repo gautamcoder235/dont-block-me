@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #E4F0FE;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.7) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.7) 0%, transparent 25%),
+      linear-gradient(180deg, #E4F0FE 0%, #d4e8fc 50%, #c5e1fb 100%);
+    background-attachment: fixed;
+    font-family: 'Shantell Sans', 'Kosugi Maru', cursive, sans-serif;
+  }
+}
+
+/* Washi Tape styling */
+.washi-tape-pink {
+  background: repeating-linear-gradient(
+    45deg,
+    #ff94b8,
+    #ff94b8 10px,
+    #ffaac7 10px,
+    #ffaac7 20px
+  );
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+.washi-tape-hearts {
+  background-color: #ff8fab;
+  background-image: radial-gradient(#ffffff 20%, transparent 20%);
+  background-size: 10px 10px;
+}
+
+/* Lined notebook styling */
+.notebook-lines {
+  background-color: #ffffff;
+  background-image: linear-gradient(#e1edfa 1px, transparent 1px);
+  background-size: 100% 28px;
+  line-height: 28px;
+}
+
+/* Cute 3D Button */
+.cute-btn-blue {
+  background: linear-gradient(180deg, #25a4fc 0%, #0d8ee8 100%);
+  box-shadow: 0 5px 0 #076eb8, 0 8px 16px rgba(13, 142, 232, 0.35);
+  transition: all 0.1s ease;
+}
+.cute-btn-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #076eb8, 0 3px 6px rgba(13, 142, 232, 0.35);
+}
+
+.cute-btn-pink {
+  background: linear-gradient(180deg, #ff5e98 0%, #f43f7d 100%);
+  box-shadow: 0 5px 0 #bd1a53, 0 8px 16px rgba(244, 63, 125, 0.35);
+  transition: all 0.1s ease;
+}
+.cute-btn-pink:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #bd1a53, 0 3px 6px rgba(244, 63, 125, 0.35);
+}
+
+/* Decorative underline */
+.fancy-underline {
+  position: relative;
+  display: inline-block;
+}
+.fancy-underline::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0px;
+  height: 6px;
+  background-color: #fcd34d;
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(-1deg);
+}
+
+.fancy-underline-pink::after {
+  background-color: #fbcfe8;
+}
+
+.fancy-underline-blue::after {
+  background-color: #bae6fd;
+}
+
+/* Notebook hole punches */
+.binder-holes {
+  background-image: radial-gradient(circle, #e2e8f0 3.5px, transparent 4px);
+  background-size: 100% 28px;
+  background-position: center 10px;
+}
