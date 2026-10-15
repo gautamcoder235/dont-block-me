@@ -1,32 +1,10 @@
-# React + TypeScript + Vite
+# Don't Block Me - Gautam Edition 🐻🛑
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A cute, interactive viral friendship and crush quiz web app built with React 19, TypeScript, Tailwind CSS, and Web Audio API.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Features
+- 🐻 **Gautam's Edition**: 10 personalized questions with custom Dudu mascot graphics and animations.
+- 💬 **Interactive Comic Showdown**: 7-scene dynamic dialogue battle with funny punchlines and verdicts.
+- 🏆 **Live Scoreboard**: Ranking badges, avatars, search filter, and player answer breakdown modal.
+- 🔊 **Built-in Sound Effects**: Zero-latency Web Audio API synthesizer with pop, chimes, victory fanfare, and sound toggle.
+- ⚡ **Deploy-Ready**: Fully configured with SPA rewrites for Vercel and Netlify.
